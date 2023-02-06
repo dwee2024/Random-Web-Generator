@@ -11,6 +11,14 @@ html, body {
   font-size: 16px;
 }
 .button {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.button {
   transition-duration: 0.5s;
 }
 .button:hover {
