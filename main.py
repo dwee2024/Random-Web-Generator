@@ -13,4 +13,4 @@ def add_link():
     return "Link already in database."
 
 if __name__ == "__main__":
-  app.run()
+  app.run(port=8000)

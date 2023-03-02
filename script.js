@@ -10,13 +10,14 @@ xhr.onreadystatechange = function() {
     const link = randomAPI.Link;
     addLinkToDatabase(link);
     window.open(link, "_blank");
-    document.getElementById("message").textContent = "New link generated!";
+    // document.getElementById("message").textContent = "New link generated!";
+    alert("Link added to database.");
   }
 };
 
 function addLinkToDatabase(link) {
   const xhr = new XMLHttpRequest();
-  xhr.open("POST", "/add-link");
+  xhr.open("POST", "http://localhost:8000/add-link");
   xhr.setRequestHeader("Content-Type", "application/json");
   xhr.send(JSON.stringify({ link: link }));
 }
